@@ -26,7 +26,7 @@ class Payment extends Component {
 
     }
     onUpdate() {
-        axios.put(`http://localhost:9996/research/updatepayment/${this.props.match.params.id}`)
+        axios.put(`https://icaf-blackpanthers.herokuapp.com/research/updatepayment/${this.props.match.params.id}`)
             .then(response => {
                 store.addNotification({
                     title: "message",
@@ -98,7 +98,7 @@ class Payment extends Component {
             cvc: this.state.cvc
         }
         console.log('Data to send', payment);
-        axios.post('http://localhost:9996/payment/create', payment)
+        axios.post('https://icaf-blackpanthers.herokuapp.com/payment/create', payment)
             .then(response => {
                 store.addNotification({
                     title: "message",

@@ -15,14 +15,14 @@ class ViewConfDetails extends Component {
     }
 
     componentDidMount(){
-        axios.get('http://localhost:9996/administrator/conference')
+        axios.get('https://icaf-blackpanthers.herokuapp.com/administrator/conference')
         .then(response => {
             this.setState({conference : response.data.data })
         })
     }
 
     handleApprove = (item) => {
-        axios.put(`http://localhost:9996/administrator/approvecd/${item._id}`)   
+        axios.put(`https://icaf-blackpanthers.herokuapp.com/administrator/approvecd/${item._id}`)   
         .then(response=>{
             store.addNotification({
                 title: "Conference Details",
@@ -47,7 +47,7 @@ class ViewConfDetails extends Component {
         })
     }
     handleNotApprove = (item) => {
-        axios.put(`http://localhost:9996/administrator/disapprovecd/${item._id}`)   
+        axios.put(`https://icaf-blackpanthers.herokuapp.com/administrator/disapprovecd/${item._id}`)   
         .then(response=>{
             store.addNotification({
                 title: "Conference Details",

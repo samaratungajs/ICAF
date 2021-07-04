@@ -17,7 +17,7 @@ class onepaper extends Component {
 
     componentDidMount() {
 
-        axios.get(`http://localhost:9996/research/${this.props.match.params.id}`)
+        axios.get(`https://icaf-blackpanthers.herokuapp.com/research/${this.props.match.params.id}`)
             .then(response => {
                 this.setState({ Papers: response.data.data })
                 console.log(this.state.Papers);

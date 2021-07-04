@@ -10,7 +10,7 @@ class getallworkshop extends Component {
   }
 
   componentDidMount(){
-      axios.get('http://localhost:9996/workshop/all')
+      axios.get('https://icaf-blackpanthers.herokuapp.com/workshop/all')
       .then(response =>{
         console.log('ALL WORKSHOPS',response.data)
         this.setState({workshop : response.data.data})

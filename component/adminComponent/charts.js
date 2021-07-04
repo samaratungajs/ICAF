@@ -44,10 +44,10 @@ class ChartsPage extends React.Component {
 
 
 componentDidMount(){
-  axios.get('http://localhost:9996/administrator/wcategorytot/Approved')
+  axios.get('https://icaf-blackpanthers.herokuapp.com/administrator/wcategorytot/Approved')
   .then(response => {
       this.setState({wApproved : response.data.tot })
-      axios.get('http://localhost:9996/administrator/wcategorytot/Unapproved')
+      axios.get('https://icaf-blackpanthers.herokuapp.com/administrator/wcategorytot/Unapproved')
       .then(response => {
         this.setState({wNotApproved : response.data.tot })
       this.setState({dataDoughnut : {
@@ -68,10 +68,10 @@ componentDidMount(){
     })
   })
 
-  axios.get('http://localhost:9996/administrator/rcategorytot/Approved')
+  axios.get('https://icaf-blackpanthers.herokuapp.com/administrator/rcategorytot/Approved')
   .then(response => {
       this.setState({rApproved : response.data.tot })
-      axios.get('http://localhost:9996/administrator/rcategorytot/not approved')
+      axios.get('https://icaf-blackpanthers.herokuapp.com/administrator/rcategorytot/not approved')
       .then(response => {
         this.setState({rNotApproved : response.data.tot })
       this.setState({dataDoughnut1 : {

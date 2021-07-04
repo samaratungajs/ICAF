@@ -39,7 +39,7 @@ class CreateWorkshop extends Component {
             Status: " "
         }
         console.log('Data to Sent', workshop);
-        axios.post('http://localhost:9996/workshop/create', workshop)
+        axios.post('https://icaf-blackpanthers.herokuapp.com/workshop/create', workshop)
             .then(response => {
                 alert('Data successfully inserted')
             })

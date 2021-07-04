@@ -25,7 +25,7 @@ class paidallapproved extends Component {
     }
 
     componentDidMount() {
-        axios.get(`http://localhost:9996/research/getallapproved`)
+        axios.get(`https://icaf-blackpanthers.herokuapp.com/research/getallapproved`)
             .then(response => {
                 this.setState({ approvedPapers: response.data.data });
                 console.log(this.state.approvedPapers);

@@ -32,7 +32,7 @@ class approved extends Component {
     }
 
     componentDidMount() {
-        axios.get(`http://localhost:9996/research/get/${this.props.match.params.email}`)
+        axios.get(`https://icaf-blackpanthers.herokuapp.com/research/get/${this.props.match.params.email}`)
             .then(response => {
                 this.setState({ approvedPapers: response.data.data });
                 console.log(this.state.approvedPapers);

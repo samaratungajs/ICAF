@@ -21,7 +21,7 @@ function Login() {
             password
         }
         
-        axios.post("http://localhost:9996/user/login",oldUser).then((response)=>{
+        axios.post("https://icaf-blackpanthers.herokuapp.com/user/login",oldUser).then((response)=>{
             if(response.data.message){
                 alert(response.data.message)   
                 window.location='' 
@@ -29,7 +29,7 @@ function Login() {
                 alert("login Success")
                 // console.log(this.username)
                 console.log(username)
-                axios.get("http://localhost:9996/administrator/getUsertype/"+username)   
+                axios.get("https://icaf-blackpanthers.herokuapp.com/administrator/getUsertype/"+username)   
                 .then(response => {
                     console.log(response.data.data )
                     if(response.data.data.usertype == "Admin"){

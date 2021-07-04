@@ -14,7 +14,7 @@ class showunapprovedbyEmail extends Component {
 
 
     componentDidMount() {
-        axios.get(`http://localhost:9996/workshop/email/unapprove/${this.props.match.params.email}`)
+        axios.get(`https://icaf-blackpanthers.herokuapp.com/workshop/email/unapprove/${this.props.match.params.email}`)
             .then(response => {
                 this.setState({ unapprovedWorkshop: response.data.data });
                 console.log(this.state.unapprovedWorkshop);

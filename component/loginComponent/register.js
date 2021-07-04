@@ -18,7 +18,7 @@ function Register() {
             usertype
         }
 
-        axios.post("http://localhost:9996/user/register",newUser).then(()=>{
+        axios.post("https://icaf-blackpanthers.herokuapp.com/user/register",newUser).then(()=>{
             alert("User Added")
             window.location='/loginf' 
         }).catch((err) =>{

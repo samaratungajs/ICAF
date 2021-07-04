@@ -63,7 +63,7 @@ export default class App extends React.Component {
                      <Route path ="/workshopdownload" component={Download}  exact/>
                      <Route path ="/workshop" component={ShowApproved} exact />
                      <Route path ="/Reviewer" component={Reviewer} exact />
-                     <Route path="/gracious-curran-871f11.netlify.app/attendee" component={Attendee} exact></Route>
+                     <Route path="/attendee" component={Attendee} exact></Route>
 
                      <Route path="/register" exact component={RegisterF}></Route>
                         <Route path="/loginf" exact component={LoginF}></Route>

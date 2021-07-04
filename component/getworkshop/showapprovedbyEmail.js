@@ -14,7 +14,7 @@ class showapprovedbyEmail extends Component {
 
 
     componentDidMount() {
-        axios.get(`http://localhost:9996/workshop/email/approve/${this.props.match.params.email}`)
+        axios.get(`https://icaf-blackpanthers.herokuapp.com/workshop/email/approve/${this.props.match.params.email}`)
             .then(response => {
                 this.setState({ approvedWorkshop: response.data.data });
                 console.log(this.state.approvedWorkshop);

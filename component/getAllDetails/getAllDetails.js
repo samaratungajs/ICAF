@@ -10,7 +10,7 @@ class getAllDetails extends Component {
   }
 
   componentDidMount(){
-      axios.get('http://localhost:9996/editor/all')
+      axios.get('https://icaf-blackpanthers.herokuapp.com/editor/all')
       .then(response =>{
         console.log('ALL details',response.data)
         this.setState({editor : response.data.data})

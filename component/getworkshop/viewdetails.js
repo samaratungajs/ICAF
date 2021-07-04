@@ -10,7 +10,7 @@ class ViewDetails extends Component {
         }
     }
 componentDidMount() {
-    axios.get(`http://localhost:9996/workshop/${this.props.match.params.id}`)
+    axios.get(`https://icaf-blackpanthers.herokuapp.com/workshop/${this.props.match.params.id}`)
         .then(response => {
             console.log('ALL WORKSHOPS',response.data);
             this.setState({ workshop: response.data.data});

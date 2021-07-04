@@ -45,7 +45,7 @@ class CreateAttendee extends Component {
         }
         console.log('Data to Sent', attendee);
 
-        axios.post('http://localhost:9996/atendee/create-attendee', attendee)
+        axios.post('https://icaf-blackpanthers.herokuapp.com/atendee/create-attendee', attendee)
             .then(response => {
                 alert('You Registered successfully...')
             })

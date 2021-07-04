@@ -19,7 +19,7 @@ class WorkshopStatus extends Component {
 
   
     componentDidMount() {
-        axios.get(`http://localhost:9996/workshop/${this.props.match.params.id}`)
+        axios.get(`https://icaf-blackpanthers.herokuapp.com/workshop/${this.props.match.params.id}`)
             .then(response => {
                 console.log('ALL WORKSHOPS', response.data);
                 this.setState({ workshop: response.data.data });
@@ -31,7 +31,7 @@ class WorkshopStatus extends Component {
     }
 
     onClickApprove() {
-        axios.put(`http://localhost:9996/workshop/approved/${this.props.match.params.id}`)
+        axios.put(`https://icaf-blackpanthers.herokuapp.com/workshop/approved/${this.props.match.params.id}`)
             .then(response => {
                 alert('Workshop scuccefully Approved ')
                
@@ -69,7 +69,7 @@ class WorkshopStatus extends Component {
     }
 
     onClickUnapprove() {
-        axios.put(`http://localhost:9996/workshop/unapproved/${this.props.match.params.id}`)
+        axios.put(`https://icaf-blackpanthers.herokuapp.com/workshop/unapproved/${this.props.match.params.id}`)
             .then(response => {
                 alert('Workshop scuccefully Approved ');
                 window.location.reload(false);

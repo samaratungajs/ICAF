@@ -11,7 +11,7 @@ class ViewAdministrator extends Component {
     }
 
     componentDidMount(){
-        axios.get('http://localhost:9996/administrator/')
+        axios.get('https://icaf-blackpanthers.herokuapp.com/administrator/')
         .then(response => {
             this.setState({administrators : response.data.data })
         })
@@ -22,7 +22,7 @@ class ViewAdministrator extends Component {
     }
     
     handleDeleteAdmin = (item) => {
-        axios.delete(`http://localhost:9996/administrator/delete/${item._id}`)   
+        axios.delete(`https://icaf-blackpanthers.herokuapp.com/administrator/delete/${item._id}`)   
         .then(response=>{
             alert('Administrator Removed');
             this.componentDidMount();

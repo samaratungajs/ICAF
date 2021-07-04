@@ -22,7 +22,7 @@ class Paper extends Component {
         this.onDelete;
     }
     onDelete() {
-        axios.delete(`http://localhost:9996/research/delete/${this.props.match.params.id}`)
+        axios.delete(`https://icaf-blackpanthers.herokuapp.com/research/delete/${this.props.match.params.id}`)
 
             .then(response => {
                 alert('Research paper is deleted');
@@ -34,7 +34,7 @@ class Paper extends Component {
     }
 
     onUpdate() {
-        axios.put(`http://localhost:9996/research/update/${this.props.match.params.id}`)
+        axios.put(`https://icaf-blackpanthers.herokuapp.com/research/update/${this.props.match.params.id}`)
             .then(response => {
                 alert('Research paper is approved');
 
@@ -63,7 +63,7 @@ class Paper extends Component {
             });
     }
     onUpdatenotapproval() {
-        axios.put(`http://localhost:9996/research/update/disapproved/${this.props.match.params.id}`)
+        axios.put(`https://icaf-blackpanthers.herokuapp.com/research/update/disapproved/${this.props.match.params.id}`)
             .then(response => {
                 alert('Research paper is not approved');
             }).catch(error => {
@@ -74,7 +74,7 @@ class Paper extends Component {
 
     componentDidMount() {
 
-        axios.get(`http://localhost:9996/research/${this.props.match.params.id}`)
+        axios.get(`https://icaf-blackpanthers.herokuapp.com/research/${this.props.match.params.id}`)
             .then(response => {
                 this.setState({ Papers: response.data.data })
                 console.log(this.state.Papers);

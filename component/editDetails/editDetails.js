@@ -39,7 +39,7 @@ class editDetails extends Component {
         }
         console.log(Status.value);
         console.log('Data to Sent', Editor);
-        axios.put(`http://localhost:9996/editor/update/${this.props.match.params.id}`, Editor)
+        axios.put(`https://icaf-blackpanthers.herokuapp.com/editor/update/${this.props.match.params.id}`, Editor)
             .then(response => {
                 alert('Data successfully updated')
             })
@@ -50,7 +50,7 @@ class editDetails extends Component {
     }
 
     componentDidMount() {
-        axios.get(`http://localhost:9996/editor/${this.props.match.params.id}`)
+        axios.get(`https://icaf-blackpanthers.herokuapp.com/editor/${this.props.match.params.id}`)
             .then(response => {
                 console.log('ALL details', response.data)
                 this.setState({ editor: response.data.data })

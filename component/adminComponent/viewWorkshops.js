@@ -15,7 +15,7 @@ class ViewWorkshops extends Component {
 
     
     getWorkshops = (item) => {
-        axios.get(`http://localhost:9996/administrator/getwcategory/${item._id}`)   
+        axios.get(`https://icaf-blackpanthers.herokuapp.com/administrator/getwcategory/${item._id}`)   
         .then(response => {
             this.setState({workshop : response.data.data })
         })
@@ -29,7 +29,7 @@ class ViewWorkshops extends Component {
     onSubmit(e){
         e.preventDefault();
         
-        axios.get(`http://localhost:9996/administrator/getwcategory/${this.state.input}`)   
+        axios.get(`https://icaf-blackpanthers.herokuapp.com/administrator/getwcategory/${this.state.input}`)   
         .then(response => {
             this.setState({workshop : response.data.data })
         })

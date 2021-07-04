@@ -21,27 +21,27 @@ class dashboard extends Component {
     }
 
     componentDidMount(){
-        axios.get('http://localhost:9996/administrator/gettotpayment')
+        axios.get('https://icaf-blackpanthers.herokuapp.com/administrator/gettotpayment')
         .then(response => {
             this.setState({paymentTot : response.data.tot })
         })
-        axios.get('http://localhost:9996/administrator/wcategorytot/Approved')
+        axios.get('https://icaf-blackpanthers.herokuapp.com/administrator/wcategorytot/Approved')
         .then(response => {
             this.setState({Approvedworkshops : response.data.tot })
         })
-        axios.get('http://localhost:9996/administrator/wcategorytot/Unapproved')
+        axios.get('https://icaf-blackpanthers.herokuapp.com/administrator/wcategorytot/Unapproved')
         .then(response => {
             this.setState({Unapprovedworkshops : response.data.tot })
         })
-        axios.get('http://localhost:9996/administrator/rcategorytot/Approved')
+        axios.get('https://icaf-blackpanthers.herokuapp.com/administrator/rcategorytot/Approved')
         .then(response => {
             this.setState({ApprovedRe : response.data.tot })
         })
-        axios.get('http://localhost:9996/administrator/rcategorytot/not approved')
+        axios.get('https://icaf-blackpanthers.herokuapp.com/administrator/rcategorytot/not approved')
         .then(response => {
             this.setState({UnapprovedRe : response.data.tot })
         })
-        axios.get('http://localhost:9996/administrator/gettot')
+        axios.get('https://icaf-blackpanthers.herokuapp.com/administrator/gettot')
         .then(response => {
             this.setState({Admins : response.data.totalAdmins })
         })

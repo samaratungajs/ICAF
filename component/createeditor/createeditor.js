@@ -36,7 +36,7 @@ class CreateEditor extends Component {
             Status: " "
         }
         console.log('Data to Sent', editor);
-        axios.post('http://localhost:9996/editor/create', editor)
+        axios.post('https://icaf-blackpanthers.herokuapp.com/editor/create', editor)
             .then(response => {
                 alert('Data successfully inserted')
             })

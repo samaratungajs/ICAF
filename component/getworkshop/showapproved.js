@@ -10,7 +10,7 @@ class showapprovedworkshop extends Component {
   }
 
   componentDidMount(){
-      axios.get('http://localhost:9996/workshop/')
+      axios.get('https://icaf-blackpanthers.herokuapp.com/workshop/')
       .then(response =>{
         console.log('Aprroved Workshops',response.data)
         this.setState({workshop : response.data.data})

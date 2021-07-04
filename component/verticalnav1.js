@@ -14,7 +14,7 @@ const VerticalNavbar1 = () => {
           }
         }
         axios.get( 
-            'http://localhost:9996/user/post',
+            'https://icaf-blackpanthers.herokuapp.com/user/post',
             config)
           .then( ( response ) => {
             if(response.data.message){

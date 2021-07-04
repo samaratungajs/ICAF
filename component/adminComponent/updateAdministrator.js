@@ -21,7 +21,7 @@ class UpdateAdministrator extends Component {
     }
 
     componentDidMount(){
-        axios.get(`http://localhost:9996/administrator/getadmin/${this.props.match.params.id}`)
+        axios.get(`https://icaf-blackpanthers.herokuapp.com/administrator/getadmin/${this.props.match.params.id}`)
         .then(response => {
             this.setState({administrators : response.data.data })
             this.setState({username: response.data.data.username})
@@ -39,7 +39,7 @@ class UpdateAdministrator extends Component {
             
         }
         console.log('Data to send', admin )
-        axios.put(`http://localhost:9996/administrator/update/${this.props.match.params.id}`, admin)
+        axios.put(`https://icaf-blackpanthers.herokuapp.com/administrator/update/${this.props.match.params.id}`, admin)
         .then(response => {
             alert('Data Updated')
             window.location='/view-admin'

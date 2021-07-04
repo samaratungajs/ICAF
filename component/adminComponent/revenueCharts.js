@@ -29,10 +29,10 @@ class RevenuechartsPage extends React.Component {
 
 
 componentDidMount(){
-  axios.get('http://localhost:9996/administrator/rpayed/Paid')
+  axios.get('https://icaf-blackpanthers.herokuapp.com/administrator/rpayed/Paid')
   .then(response => {
       this.setState({rPaid : response.data.tot })
-      axios.get('http://localhost:9996/administrator/rpayed/not Paid')
+      axios.get('https://icaf-blackpanthers.herokuapp.com/administrator/rpayed/not Paid')
       .then(response => {
         this.setState({rNotpaid : response.data.tot })
       this.setState({dataDoughnut : {

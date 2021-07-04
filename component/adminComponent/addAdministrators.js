@@ -30,7 +30,7 @@ class AddAdministrator extends Component {
             
         }
         console.log('Data to send', admin )
-        axios.post('http://localhost:9996/user/register', admin)
+        axios.post('https://icaf-blackpanthers.herokuapp.com/user/register', admin)
         .then(response => {
             
             store.addNotification({
